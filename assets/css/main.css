@@ -335,12 +335,6 @@ a svg {
   transition: all 0.2s ease-in-out;
 }
 
-ol,
-ul {
-  margin: 0;
-  padding: 0;
-}
-
 hr {
   border: 0;
   border-collapse: collapse;
@@ -363,6 +357,67 @@ i {
   content: "";
   display: table;
   clear: both;
+}
+
+.entry-content > *,
+.editor-styles-wrapper > * {
+  /* Lists
+  --------------------------------------------- */
+  /** Custom List
+  --------------------------------------------- */
+}
+.entry-content > * ul, .entry-content > * ol,
+.editor-styles-wrapper > * ul,
+.editor-styles-wrapper > * ol {
+  padding-left: 1.5rem;
+}
+.entry-content > * ul li, .entry-content > * ol li,
+.editor-styles-wrapper > * ul li,
+.editor-styles-wrapper > * ol li {
+  padding-bottom: 0.5rem;
+}
+.entry-content > * ul li:last-child, .entry-content > * ol li:last-child,
+.editor-styles-wrapper > * ul li:last-child,
+.editor-styles-wrapper > * ol li:last-child {
+  padding-bottom: 0;
+}
+.entry-content > * ul li ul, .entry-content > * ul li ol, .entry-content > * ol li ul, .entry-content > * ol li ol,
+.editor-styles-wrapper > * ul li ul,
+.editor-styles-wrapper > * ul li ol,
+.editor-styles-wrapper > * ol li ul,
+.editor-styles-wrapper > * ol li ol {
+  padding-top: 0.5rem;
+}
+.entry-content > * ul.wp-block-gallery, .entry-content > * ol.wp-block-gallery,
+.editor-styles-wrapper > * ul.wp-block-gallery,
+.editor-styles-wrapper > * ol.wp-block-gallery {
+  padding-left: 0;
+}
+.entry-content > * ul.wp-block-gallery li, .entry-content > * ol.wp-block-gallery li,
+.editor-styles-wrapper > * ul.wp-block-gallery li,
+.editor-styles-wrapper > * ol.wp-block-gallery li {
+  padding-bottom: 0;
+}
+.entry-content > * ul.check-list,
+.editor-styles-wrapper > * ul.check-list {
+  list-style: none;
+}
+.entry-content > * ul.check-list li,
+.editor-styles-wrapper > * ul.check-list li {
+  position: relative;
+}
+.entry-content > * ul.check-list li::before,
+.editor-styles-wrapper > * ul.check-list li::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: 0;
+  bottom: 0;
+  left: -24px;
+  width: 22px;
+  height: 22px;
+  background: url(../icons/utility/check.svg) no-repeat;
+  background-size: cover;
 }
 
 /* Paragraph and Gutenberg font sizes
@@ -581,11 +636,14 @@ blockquote.wp-block-quote::before {
   width: 100%;
   height: 100%;
   z-index: 1;
-  top: -35px;
+  width: 3rem;
+  height: 3rem;
+  top: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
   background: transparent url(../icons/utility/quote.svg) no-repeat top left;
-  background-size: 120px;
-  text-align: left;
-  opacity: 0.1;
+  background-size: cover;
+  opacity: 1;
 }
 blockquote.wp-block-quote p {
   color: #383838;
@@ -619,8 +677,8 @@ blockquote.wp-block-quote p:last-of-type {
 .wp-block-pullquote blockquote {
   margin: 0;
   padding: 4% 8%;
-  background-color: #383838;
-  border-left: 3px solid #642581;
+  background-color: #f7f7f7;
+  border-left: 4px solid #642581;
 }
 .wp-block-pullquote blockquote p {
   color: #383838;
@@ -800,6 +858,18 @@ blockquote.wp-block-quote p:last-of-type {
 .content-width .block-area > * .wp-block-media-text.is-stacked-on-mobile figure {
     margin-bottom: 20px;
   }
+}
+.entry-content > *.wp-block-media-text .wp-block-media-text__media,
+.block-area > *.wp-block-media-text .wp-block-media-text__media {
+  border-radius: 19px;
+}
+.entry-content > *.wp-block-media-text .wp-block-media-text__content,
+.block-area > *.wp-block-media-text .wp-block-media-text__content {
+  padding: 0 0 0 8%;
+}
+.entry-content > *.wp-block-media-text.has-media-on-the-right .wp-block-media-text__content,
+.block-area > *.wp-block-media-text.has-media-on-the-right .wp-block-media-text__content {
+  padding: 0 8% 0 0;
 }
 
 /* Image and Gallery
@@ -1920,67 +1990,6 @@ hr::before {
 .alignright {
   float: right;
   text-align: right;
-}
-
-.entry-content > *,
-.editor-styles-wrapper > * {
-  /* Lists
-  --------------------------------------------- */
-  /** Custom List
-  --------------------------------------------- */
-}
-.entry-content > * ul, .entry-content > * ol,
-.editor-styles-wrapper > * ul,
-.editor-styles-wrapper > * ol {
-  padding-left: 1.5rem;
-}
-.entry-content > * ul li, .entry-content > * ol li,
-.editor-styles-wrapper > * ul li,
-.editor-styles-wrapper > * ol li {
-  padding-bottom: 0.5rem;
-}
-.entry-content > * ul li:last-child, .entry-content > * ol li:last-child,
-.editor-styles-wrapper > * ul li:last-child,
-.editor-styles-wrapper > * ol li:last-child {
-  padding-bottom: 0;
-}
-.entry-content > * ul li ul, .entry-content > * ul li ol, .entry-content > * ol li ul, .entry-content > * ol li ol,
-.editor-styles-wrapper > * ul li ul,
-.editor-styles-wrapper > * ul li ol,
-.editor-styles-wrapper > * ol li ul,
-.editor-styles-wrapper > * ol li ol {
-  padding-top: 0.5rem;
-}
-.entry-content > * ul.wp-block-gallery, .entry-content > * ol.wp-block-gallery,
-.editor-styles-wrapper > * ul.wp-block-gallery,
-.editor-styles-wrapper > * ol.wp-block-gallery {
-  padding-left: 0;
-}
-.entry-content > * ul.wp-block-gallery li, .entry-content > * ol.wp-block-gallery li,
-.editor-styles-wrapper > * ul.wp-block-gallery li,
-.editor-styles-wrapper > * ol.wp-block-gallery li {
-  padding-bottom: 0;
-}
-.entry-content > * ul.check-list,
-.editor-styles-wrapper > * ul.check-list {
-  list-style: none;
-}
-.entry-content > * ul.check-list li,
-.editor-styles-wrapper > * ul.check-list li {
-  position: relative;
-}
-.entry-content > * ul.check-list li::before,
-.editor-styles-wrapper > * ul.check-list li::before {
-  content: "";
-  position: absolute;
-  top: 2px;
-  right: 0;
-  bottom: 0;
-  left: -24px;
-  width: 22px;
-  height: 22px;
-  background: url(/wp-content/themes/box-theme/assets/icons/utility/check.svg) no-repeat;
-  background-size: cover;
 }
 
 /* Entry Meta

@@ -24,6 +24,11 @@ img {
 		margin-right: auto;
 	}
 
+    // overwrite the default Gutenberg style
+    .wp-block-image:not(.is-style-rounded) & {
+        border-radius: $border-radius;
+    }
+
 }
 
 .wp-block-image figcaption {

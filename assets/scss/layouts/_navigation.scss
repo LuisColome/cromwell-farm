@@ -26,12 +26,13 @@
 			color: $base-color;
 			display: block;
 			font-size: 16px;
-			font-weight: 400;
+			font-weight: 600;
 			line-height: 1.2;
 			padding: .5em 1em;
             margin-right: .7em;
 			position: relative;
 			text-decoration: none;
+            text-transform: uppercase;
 		}
         
         &:last-child a {
@@ -51,27 +52,48 @@
 
         span {
             display: inline-block;
+            position: relative;
             text-decoration: none;
             padding-top: 5px;
 
             &::after {
                 content: '';
                 display: block;
+                position: absolute;
+                left: 0;
+                right: 0;
                 width: 0;
-                height: 1px;
-                background: $primary-color;
+                height: 2px;
+                border-radius: 5px;
                 transition: width .3s;
-                margin-top: 5px;
+                margin: 3px auto 0;
+                background: transparent;
+                transition: width .25s ease, background-color .25s ease;
+            }
+        }
+
+        a:focus,
+        a:hover,
+        .current-menu-item > a,
+        .sub-menu .current-menu-item > a:focus,
+        .sub-menu .current-menu-item > a:hover {
+            // color: brand-color( 'dark-green' );
+            text-decoration: none;
+      
+            span::after {
+                background: $primary-color;
+                width: 100%;
             }
         }
 
         &.highlight {
                 
             a {
-                margin-top: 3px;
-                border: 2px solid $primary-color;
-                border-radius: $border-radius;
-                color: $primary-color;
+                margin: 3px 0 0 1em;
+                padding: .55em 1.45em;
+                background-color: $primary-color;
+                border-radius: 200px;
+                color: $white;
 
                 @include media('<=mobile_menu') {
                     text-align: center;
@@ -80,8 +102,7 @@
                 
                 &:hover,
                 &:focus {
-                    background-color: $primary-color;
-                    color: $white;
+                    background-color: $highlight;
                 }
 
                 span {
@@ -92,19 +113,6 @@
                     }
                 }
             }
-        }
-
-        a:focus,
-        a:hover,
-        .current-menu-item > a,
-        .sub-menu .current-menu-item > a:focus,
-        .sub-menu .current-menu-item > a:hover {
-          // color: brand-color( 'dark-green' );
-          text-decoration: none;
-      
-          span::after {
-              width: 100%;
-          }
         }
 	}
 
@@ -207,6 +215,10 @@
 			.menu-item {
 				float: none;
 
+                a {
+                    text-transform: none;
+                }
+
 				&:hover > a {
 					color: $primary-color;
 				}
@@ -233,7 +245,7 @@
         background: $white;
         // border-top: 1px solid $border-color;
         transition: all .3s ease-in-out;
-        padding: 105px $grid-gap 0;
+        padding: 75px $grid-gap 0;
         overflow: auto;
         z-index: 997;
 
@@ -244,7 +256,7 @@
 
 		.menu > .menu-item > a {
 			padding: 11px 18px;
-            font-size: 18px;
+            font-size: 16px;
 		}
 
 		.submenu-expand {
@@ -277,6 +289,7 @@
             & > .menu-item > a {
                 font-size: 15px;
                 line-height: 1.4;
+                text-transform: none;
             }
 		}
 	}
@@ -285,30 +298,35 @@
 /* Nav Header with Site logo
 --------------------------------------------- */
 
-.nav-header {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 75px;
-    padding-left: 20px;
-    display: flex;
-    align-items: center;
-    background-color: $primary-color;
+// .nav-header {
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     bottom: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 75px;
+//     padding-left: 20px;
+//     display: flex;
+//     align-items: center;
+//     background-color: $primary-color;
+//     @include transition;
 
-    &__logo {
-        display: block;
-        width: 50px;
-        height: 50px;
-        text-indent: -9999px;
-    }
+//     .shrink & {
+//         height: 50px;
+//     }
 
-    @include media('>tablet') {
-        display: none;
-    }
-}
+//     &__logo {
+//         display: block;
+//         width: 50px;
+//         height: 50px;
+//         text-indent: -9999px;
+//     }
+
+//     @include media('>tablet') {
+//         display: none;
+//     }
+// }
 
 /* Nav Header overlay layer
 --------------------------------------------- */
@@ -448,11 +466,11 @@
 		height: 3px;
 		width: 100%;
 		background: $base-color;
-		border-radius: 2em;
+		border-radius: 4px;
 		opacity: 1;
-		left: 0;
+		right: 0;
 		transform: rotate(0deg);
-		transform-origin: left center;
+		transform-origin: center center;
 		transition: all .35s ease-in-out;
 
 		&.first {
@@ -477,35 +495,23 @@
 	&.active {
 		background-color: transparent; // prevent button defaults
 		.toggl__bar {
-			background: $white;
+			background: $primary-color;
             height: 4px;
 			&.first {
-				transform: rotate(45deg);
-				top: 0px;
-				left: 8px;
+				transform: rotate(315deg);
+                top: 12px;
+                right: -1px;
 				width: 60%;
 			}
 			&.second {
-				left: -1em;
-				opacity: 0;
+				transform: rotate(180deg);
 			}
 			&.third {
-				transform: rotate(-45deg);
-				top: 11px;
-				left: 8px;
+				transform: rotate(225deg);
+				top: 0px;
+                right: -1px;
 				width: 60%;
 			}
 		}
 	}
-
-	// &.active {
-
-	// 	.close {
-	// 		display: inline;
-	// 	}
-
-	// 	.open {
-	// 		display: none;
-	// 	}
-	// }
 }

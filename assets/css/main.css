@@ -951,55 +951,14 @@ hr::before {
   border-radius: 19px;
 }
 
-/* Genesis Simple FAQ
---------------------------------------------- */
-.gs-faq__question {
-  background: transparent;
-  border-bottom: 1px solid #d3d3d3;
-  color: #454545;
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.gs-faq__question:focus,
-.gs-faq__question:hover {
-  background: transparent;
-  color: #642581;
-}
-
-.gs-faq__question::after {
-  content: "";
-  font-family: dashicons;
-  /* stylelint-disable-line font-family-no-missing-generic-family-keyword */
-  float: right;
-}
-
-.gs-faq__question.gs-faq--expanded::after {
-  content: "";
-}
-
-/* Genesis Blocks
+/* Kadence Blocks
 ---------------------------------------------------------------------------- */
-.gb-block-post-grid h2 a {
-  text-decoration: none;
+.full-width-content .entry-content > *.wp-block-kadence-rowlayout.alignfull, .content-width .entry-content > *.wp-block-kadence-rowlayout.alignfull,
+.full-width-content .editor-styles-wrapper > *.wp-block-kadence-rowlayout.alignfull,
+.content-width .editor-styles-wrapper > *.wp-block-kadence-rowlayout.alignfull {
+  padding: 0;
 }
 
-.gb-block-post-grid .gb-post-grid-items h2 a:hover {
-  color: #642581;
-}
-
-@media only screen and (max-width: 510px) {
-  .gb-block-container.alignfull::before {
-    content: " ";
-    display: table;
-  }
-
-  .gb-block-container.alignfull::after {
-    clear: both;
-    content: " ";
-    display: table;
-  }
-}
 /* Structure and Layout
 ----------------------------------------------------------------------------- */
 /* Site Container

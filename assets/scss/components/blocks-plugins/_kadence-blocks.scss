@@ -1,0 +1,18 @@
+@use "abstracts" as *;
+@use "../../vendor/include-media" as *;
+
+
+/* Kadence Blocks
+---------------------------------------------------------------------------- */
+
+.entry-content > *,
+.editor-styles-wrapper > * {
+
+	.full-width-content &,
+	.content-width & {
+
+        &.wp-block-kadence-rowlayout.alignfull {
+            padding: 0;
+        }
+    }
+}

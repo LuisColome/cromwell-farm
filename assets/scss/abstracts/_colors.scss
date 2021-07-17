@@ -3,33 +3,32 @@
 // Colors
 $white: #ffffff;
 $grey_1: #fafafa;
-$grey_2: #f2f3f8;
-$grey_3: #eeeeee;
+$grey_2: #f7f7f7;
+$grey_3: #d3d3d3;
 $grey_4: #e0e0e0;
 $grey_5: #bdbdbd;
 $grey_6: #9e9e9e;
 $grey_7: #757575;
 $grey_8: #616161;
-$grey_9: #414243;
+$grey_9: #454545;
 $grey_10: #212223;
 $black: #000;
 
 // Brand Colors
 $brand_colors: (
-	'green': #1b7e90,
-    // 'green'   : #35b3ab,
-    // 'light-green' : #add7d3,
-    'orange' : #de8974,
-	'grey'	: $grey_2,
-    'dark-grey' : $grey_8,
+	'purple': #642581,
+    // 'orange' : #de8974,
+    'light-grey': $grey_2, 
+	'grey'	: #383838,
+    'dark-grey' : $grey_9,
 );
 
 // color variables
-$primary-color: brand-color( 'green' );
-$secondary-color: brand-color('orange');
-$base-color: $grey_8;
-$highlight: brand-color( 'green', 'darken' );
-$border-color: $grey_4;
+$primary-color: brand-color( 'purple' );
+// $secondary-color: brand-color('orange');
+$base-color: brand-color( 'grey');
+$highlight: brand-color( 'green', 'lighten' );
+$border-color: $grey_3;
 
 // Social colors
 $facebook: #3b5998;

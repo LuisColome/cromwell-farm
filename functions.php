@@ -94,7 +94,9 @@ function ea_child_theme_setup() {
 	remove_image_size( '2048x2048' );
 
 	// Adds image sizes.
-	add_image_size( 'lcm-featured-images', 768, 432, true ); // 16:9
+	add_image_size( 'cf-standard-image', 768, 432, true ); // 16:9
+	add_image_size( 'cf-featured-image', 768, 626, true );
+
 
 	/**
 	 * Register custom images sizes to use in Gutenberg
@@ -103,7 +105,8 @@ function ea_child_theme_setup() {
 		return array_merge( $sizes, array(
 
 		//Add your custom sizes here
-		'lcm-featured-images' => __( 'Featured Blog (768x432)' ),
+		'cf-featured-image' => __( 'Cromwell Farm Featured Image (768x626)' ),
+		'cf-standard-image' => __( 'Standard Featured Image (768x432)' ),
 		
 		) );
 	}
@@ -126,52 +129,58 @@ function ea_child_theme_setup() {
 	// -- Editor Font Sizes
 	add_theme_support( 'editor-font-sizes', array(
 		array(
-			'name'      => __( 'Small', 'ea_genesis_child' ),
-			'shortName' => __( 'S', 'ea_genesis_child' ),
-			'size'      => 16,
+			'name'      => __( 'Small', 'cromwellfarm' ),
+			'shortName' => __( 'S', 'cromwellfarm' ),
+			'size'      => 14,
 			'slug'      => 'small'
 		),
 		array(
-			'name'      => __( 'Normal', 'ea_genesis_child' ),
-			'shortName' => __( 'M', 'ea_genesis_child' ),
-			'size'      => 20,
+			'name'      => __( 'Normal', 'cromwellfarm' ),
+			'shortName' => __( 'M', 'cromwellfarm' ),
+			'size'      => 18,
 			'slug'      => 'normal'
 		),
 		array(
-			'name'      => __( 'Large', 'ea_genesis_child' ),
-			'shortName' => __( 'L', 'ea_genesis_child' ),
-			'size'      => 24,
+			'name'      => __( 'Large', 'cromwellfarm' ),
+			'shortName' => __( 'L', 'cromwellfarm' ),
+			'size'      => 22,
 			'slug'      => 'large'
+		),
+		array(
+			'name'      => __( 'Huge', 'cromwellfarm' ),
+			'shortName' => __( 'H', 'cromwellfarm' ),
+			'size'      => 26,
+			'slug'      => 'huge'
 		),
 	) );
 
 	// -- Disable Custom Colors
-	add_theme_support( 'disable-custom-colors' );
+	// add_theme_support( 'disable-custom-colors' );
 
 	// -- Editor Color Palette
 	add_theme_support( 'editor-color-palette', array(
 		array(
-			'name'  => __( 'Orange', 'ea_genesis_child' ),
-			'slug'  => 'orange',
-			'color'	=> '#f36523',
+			'name'  => __( 'Orange', 'cromwellfarm' ),
+			'slug'  => 'purple',
+			'color'	=> '#642581',
 		),
 		array(
-			'name'  => __( 'Yellow', 'ea_genesis_child' ),
-			'slug'  => 'yellow',
-			'color'	=> '#ffc401',
+			'name'  => __( 'Light Grey', 'cromwellfarm' ),
+			'slug'  => 'light-grey',
+			'color'	=> '#f7f7f7',
 		),
 		array(
-			'name'  => __( 'Grey', 'ea_genesis_child' ),
+			'name'  => __( 'Grey', 'cromwellfarm' ),
 			'slug'  => 'grey',
-			'color' => '#f2f3f8',
+			'color' => '#383838',
 		),
 		array(
-			'name'  => __( 'Dark grey', 'ea_genesis_child' ),
+			'name'  => __( 'Dark grey', 'cromwellfarm' ),
 			'slug'  => 'dark-grey',
-			'color' => '#616161',
+			'color' => '#454545',
 		),
 		array(
-			'name'  => __( 'White', 'ea_genesis_child' ),
+			'name'  => __( 'White', 'cromwellfarm' ),
 			'slug'  => 'white',
 			'color' => '#ffffff',
 		),
@@ -194,8 +203,8 @@ add_action( 'genesis_setup', 'ea_child_theme_setup', 15 );
  * @return array
  */
 function ea_comment_text( $args ) {
-	$args['title_reply']          = __( 'Leave A Comment', 'ea_genesis_child' );
-	$args['label_submit']         = __( 'Post Comment',  'ea_genesis_child' );
+	$args['title_reply']          = __( 'Leave A Comment', 'cromwellfarm' );
+	$args['label_submit']         = __( 'Post Comment',  'cromwellfarm' );
 	$args['comment_notes_before'] = '';
 	$args['comment_notes_after']  = '';
 	return $args;

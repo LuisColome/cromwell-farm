@@ -16,7 +16,7 @@ genesis_unregister_layout( 'sidebar-sidebar-content' );
 //genesis_unregister_layout( 'content-sidebar' );
 
 // Add new layouts
-genesis_register_layout( 'content-width', [ 'label' => __( 'Content Width', 'ea_genesis_child' ), ] );
+genesis_register_layout( 'content-width', [ 'label' => __( 'Content Width', 'cromwellfarm' ), ] );
 
 // Remove layout metabox
 //remove_theme_support( 'genesis-inpost-layouts' );

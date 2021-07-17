@@ -200,12 +200,11 @@
 
 		.sub-menu {
 			background: $white;
-			// left: -9999px;
             visibility: hidden;
 			opacity: 0;
 			position: absolute;
 			width: 230px;
-            padding: 8px 0;
+            padding: 12px 0;
             border-radius: $border-radius;
             box-shadow: 0 2px 5px rgba(0,0,0,8%),0 2px 8px rgba(0,0,0,.12);
 			z-index: 99;

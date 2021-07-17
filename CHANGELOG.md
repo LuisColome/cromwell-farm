@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### [Unreleased]
 - Support for Kadence Blocks.
 
+### [0.9.2](https://github.com/LuisColome/cromwell-farm/releases/tag/v0.9.2) - 2021-17-07
+#### Added
+- Fix space on Media and Text on mobile screens
+- Fix margin and alignment on lists
+- Support for the Check list. 
+
 ### [0.9.1](https://github.com/LuisColome/cromwell-farm/releases/tag/v0.9.1) - 2021-17-07
 #### Added
 - Header menu support

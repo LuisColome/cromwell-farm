@@ -41,7 +41,7 @@ Without these projects, this WordPress Genesis Starter Child Theme wouldn't be w
 
 
 [changelog]: ./CHANGELOG.md
-[changelog-badge]: https://img.shields.io/badge/Changelog-cromwell-farm%20Genesis%20Starter%20Theme%20v0.9.0-orange
+[changelog-badge]: https://img.shields.io/badge/Changelog-Cromwell%20Farm%20Genesis%20Child%20%20Theme-orange
 [version-badge]: https://img.shields.io/badge/version-0.9.0-informational.svg
 [last-commit]: https://img.shields.io/github/last-commit/luiscolome/cromwell-farm/main?color=yellow&logoColor=red
 [last-commit-link]: https://github.com/LuisColome/cromwell-farm/commit/main

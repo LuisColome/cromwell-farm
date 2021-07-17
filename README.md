@@ -1,6 +1,6 @@
 # Cromwell Farm - Genesis Child Theme 
 
-[![Cromwell Farm Genesis Child Theme v0.9.0 badge][changelog-badge]][changelog]  [![Version 0.9.0 Badge][version-badge]][changelog]  [![Last commit badge][last-commit]][last-commit-link]
+[![Cromwell Farm Genesis Child Theme v0.9.1 badge][changelog-badge]][changelog]  [![Version 0.9.1 Badge][version-badge]][changelog]  [![Last commit badge][last-commit]][last-commit-link]
 
 ![Cromwell Farm Screenshot](screenshot.png)
 
@@ -42,6 +42,6 @@ Without these projects, this WordPress Genesis Starter Child Theme wouldn't be w
 
 [changelog]: ./CHANGELOG.md
 [changelog-badge]: https://img.shields.io/badge/Changelog-Cromwell%20Farm%20Genesis%20Child%20%20Theme-orange
-[version-badge]: https://img.shields.io/badge/version-0.9.0-informational.svg
+[version-badge]: https://img.shields.io/badge/version-0.9.1-informational.svg
 [last-commit]: https://img.shields.io/github/last-commit/luiscolome/cromwell-farm/main?color=yellow&logoColor=red
 [last-commit-link]: https://github.com/LuisColome/cromwell-farm/commit/main

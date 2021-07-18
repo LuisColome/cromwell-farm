@@ -70,7 +70,7 @@ function ea_child_theme_setup() {
 	include_once( get_stylesheet_directory() . '/inc/genesis-changes.php' );
 
 	// Theme
-	//include_once( get_stylesheet_directory() . '/inc/site-logo.php' );
+	include_once( get_stylesheet_directory() . '/inc/site-logo.php' );
 	include_once( get_stylesheet_directory() . '/inc/site-footer.php' );
 	include_once( get_stylesheet_directory() . '/inc/login-logo.php' );
 	include_once( get_stylesheet_directory() . '/inc/layouts.php' );

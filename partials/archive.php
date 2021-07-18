@@ -19,6 +19,9 @@ echo '<article class="lcm-post">';
 		// echo '<p class="lcm-post__meta">' . $category . '</p>';
 		ea_entry_category();
  		echo '<h2 class="lcm-post__title"><a href="' . get_permalink() . '">' . get_the_title() . '</a></h2>';
+        echo '<p class="entrada__content">';
+            echo wp_trim_words( get_the_content(), 19, '...' );
+        echo '</p>';
 		echo '<a class="lcm-post__read-more-link" href="' . get_permalink() . '" tabindex="-1" aria-hidden="true">Read More<span class="screen-reader-text"> of ' . get_the_title() . '</span></a>';
 	echo '</header>';
 

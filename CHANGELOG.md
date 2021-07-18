@@ -7,6 +7,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### [Unreleased]
 - Support for Kadence Blocks.
 
+### [0.9.3](https://github.com/LuisColome/cromwell-farm/releases/tag/v0.9.3) - 2021-18-07
+#### Fixed
+- Navigation styles on transparent header
+- Chevron icon on mobile nav
+- Chevron icon on main menu on desktop screens
+- Image sixe on single posts.
+#### Added 
+- Content (limited) to posts on archive pages
+- Better Schema support for posts on archive pages
+- Support for meta post info on single posts
+- Support for WordPress comments.
+#### Removed 
+- Hard coded footer links on site footer.
+#### Updated
+- Site Footer.
+
 ### [0.9.2](https://github.com/LuisColome/cromwell-farm/releases/tag/v0.9.2) - 2021-17-07
 #### Added
 - Fix space on Media and Text on mobile screens

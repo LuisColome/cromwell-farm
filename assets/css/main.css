@@ -1530,7 +1530,7 @@ hr::before {
   position: absolute;
   line-height: 0;
   top: 50%;
-  transform: translateY(-45%);
+  transform: translateY(-40%);
   right: 9px;
 }
 @media (max-width: 768px) {

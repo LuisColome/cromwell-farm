@@ -2,49 +2,103 @@
 
 /* Entry Meta
 --------------------------------------------- */
+/* Entry Meta
+--------------------------------------------- */
 
-.entry-author {
-	font-size: 14px;
+.entry-header {
 
-	.avatar {
-		border-radius: 50%;
-		display: inline-block;
-		vertical-align: middle;
-		margin-right: 4px;
-	}
-
-	a {
-		color:$primary-color;;
-		text-decoration: none;
-
-		&:hover {
-			color: $highlight;
-		}
-	}
-}
-
-.entry-meta {
-	font-size: 16px;
-	margin-bottom: 0;
-
-	.entry-header & {
+	.entry-meta {
+        font-size: 16.2px;
+        margin-bottom: 0;
+        // font-style: italic;
+        font-size: 85%;
+        font-weight: 400;
+        color: $grey_7;
 		margin-bottom: 20px;
+
+        // reset all link styles on entry header.
+        a {
+            color: inherit;
+            font-weight: 400;
+            text-decoration-color: inherit;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
 	}
+
+    .entry-time,
+    .entry-author,
+    .entry-categories {
+        position: relative;
+        padding-left: 25px;
+        margin-right: 1rem;
+
+        &::before {
+            content:'';
+            position: absolute;
+            top: 50%;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            transform: translateY(-50%);
+            background: url(../../assets/icons/utility/calendar.svg) no-repeat 50% 50%;
+            background-size: cover;
+            width: 18px;
+            height: 18px;
+        }
+    }
+
+    .entry-categories {
+
+        &::before {
+            background: url(../../assets/icons/utility/folder.svg) no-repeat 50% 50%;
+            background-size: cover;
+        }
+    }
+
+    .entry-author {
+
+        &::before {
+            background: url(../../assets/icons/utility/user.svg) no-repeat 50% 50%;
+            background-size: cover;
+        }
+    }
 
 	.entry-footer & {
 		border-top: 1px solid $grey_3;
-		padding-top: 20px;
+		padding-top: $block-margin;
+        margin-top: $block-margin;
 	}
 
-	.entry-comments-link::before {
-		content: "\2014";
-		margin: 0 6px 0 2px;
-	}
+	// .entry-comments-link::before {
+	// 	content: "\2014";
+	// 	margin: 0 6px 0 2px;
+	// }
 } 
   
-.entry-categories,
 .entry-tags {
-	display: block;
+	display: flex;
+    flex-flow: row wrap;
+    
+    a {
+        line-height: 1.4;
+        font-weight: 400;
+        padding: .25ch 1.25ch;
+        margin: 0 6px 6px 0;
+        background-color: transparent;
+        text-decoration: none;
+        color: $base-color;
+        border-radius: $border-radius;
+        border: 1px solid $grey_4;
+
+        &:hover {
+            color: $white;
+            background-color: $highlight;
+            border-color: $highlight;
+        }
+    }
 }
 
 

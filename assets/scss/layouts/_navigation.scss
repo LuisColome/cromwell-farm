@@ -15,6 +15,7 @@
 		line-height: 1;
 		margin: 0;
 		width: 100%;
+        padding-left: 0; // avoid default padding for lists
 	}
 
 	.menu-item {
@@ -41,7 +42,7 @@
 
 		&:hover > a,
         &:hover .submenu-expand svg {
-            fill: $primary-color;
+            stroke: $primary-color;
 			color: $primary-color;
 		}
 
@@ -121,15 +122,24 @@
 		position: absolute;
 		line-height: 0;
 		top: 50%;
-		transform: translateY(-45%);
+		transform: translateY(-40%);
 		right: 9px;
-
-		// svg {
-		// 	fill: $base-color; // to fill the icon
-		// }
 	}
 
 	.nav-secondary {
+        margin-bottom: $block-margin;
+
+        .menu-item {
+
+            a {
+                color: $white;
+
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+        }
+
 		.menu-item.search {
 			@include media("<=mobile_menu") {
 				padding: 4px 16px 16px;
@@ -173,10 +183,9 @@
 			justify-content: flex-end;
 		}
 
-		.nav-primary + .nav-secondary {
-			margin-bottom: 16px;
+		.nav-secondary {
+			justify-content: center;
 		}
-
 
 		.menu {
 			display: inline-block;
@@ -189,7 +198,6 @@
 			&:hover {
 
 				& > .sub-menu {
-					// left: auto;
                     visibility: visible;
 					opacity: 1;
                     transform: translateY(8px);
@@ -229,69 +237,66 @@
 			}
 
 			.sub-menu {
-				margin: -48px 0 0 215px;
+				margin: -48px 0 0 223px;
 			}
 		}
 	}
 
-	@include media("<=mobile_menu") {
-        position: fixed;
-        width: 100%;
-        max-width: 320px;
-        height: 100%;
-        top: 0;
-        right: -100%;
-        background: $white;
-        // border-top: 1px solid $border-color;
-        transition: all .3s ease-in-out;
-        padding: 75px $grid-gap 0;
-        overflow: auto;
-        z-index: 997;
-
-		&.active {
-            right: 0;
+    &:not(.footer) {
+        @include media("<=mobile_menu") {
+            position: fixed;
+            width: 100%;
+            max-width: 320px;
+            height: 100%;
+            top: 0;
+            right: -100%;
+            background: $white;
+            transition: all .3s ease-in-out;
+            padding: $header-height $grid-gap 0;
             overflow: auto;
-		}
+            z-index: 997;
 
-		.menu > .menu-item > a {
-			padding: 11px 18px;
-            font-size: 16px;
-		}
-
-		.submenu-expand {
-			top: 0;
-			right: 0;
-			transform: none;
-			@include icon-position( 44px );
-
-			svg {
-				@include icon-position( 14px );
-			}
-
-			// &:not(.expanded) {
-			// 	transform: rotate(180deg);
-			// }
-
-			&.expanded {
-				transform: rotate(180deg);
-
-				& + .sub-menu {
-					display: block;
-				}
-			}
-		}
-
-		.sub-menu {
-			display: none;
-			padding-left: 12px;
-
-            & > .menu-item > a {
-                font-size: 15px;
-                line-height: 1.4;
-                text-transform: none;
+            &.active {
+                right: 0;
+                overflow: auto;
             }
-		}
-	}
+
+            .menu > .menu-item > a {
+                padding: 11px 18px;
+                font-size: 16px;
+            }
+
+            .submenu-expand {
+                top: 0;
+                right: 0;
+                transform: none;
+                @include icon-position( 44px );
+
+                svg {
+                    @include icon-position( 18px );
+                }
+
+                &.expanded {
+                    transform: rotate(180deg);
+
+                    & + .sub-menu {
+                        display: block;
+                    }
+                }
+            }
+
+            .sub-menu {
+                display: none;
+                padding-left: 12px;
+
+                & > .menu-item > a {
+                    font-size: 15px;
+                    line-height: 1.4;
+                    text-transform: none;
+                }
+            }
+        }
+    }
 }
 
 /* Home transpatent navigation styles within transpatent header
@@ -305,7 +310,8 @@
     
             @include media('>=mobile_menu') {
                 & > .menu-item:not(.highlight) {
-            
+                    
+                    // Menu-itemin primery color on transparent header
                     & > a {
                         color: $primary-color;
 
@@ -313,29 +319,45 @@
                             background-color: $white;
                         }
                     }
+
+                    .submenu-expand {
+
+                        // Give the chevron-icon the primery color as the rest of the menu on transpatent header
+                        svg {
+                            stroke: $primary-color; // color hover effect on the icon
+                            @include transition;
+                        }
+                    }
     
                     &:hover > a,
                     &:hover svg {
                         color: $white;
-                        fill: $white;
+                        stroke: $white;
                         @include transition;
                     }
                 }
+            
+                // Keep chevron-down icon on submenu on primery color
+                & > .menu-item {
+
+                    &:hover {
+
+                        .sub-menu {
+
+                            svg {
+                                stroke: $primary-color; // color hover effect on the icon
+                            }
+                        }
+
+                    }
+                }
                 
-                .submenu-expand,
                 .search-toggle {
     
                     svg {
-                        fill: $primary-color; // to fill the icon
+                        stroke: $primary-color; // to fill the icon
                     }
                 }
-            }
-        }
-    
-        .menu-toggle {
-    
-            .toggl__bar {
-                background-color: $white;
             }
         }
     }
@@ -513,7 +535,7 @@
 		position: absolute;
 		height: 3px;
 		width: 100%;
-		background: $base-color;
+		background: $primary-color;
 		border-radius: 4px;
 		opacity: 1;
 		right: 0;

@@ -14,7 +14,7 @@
     &.grid {
         display: grid;
         grid-template-columns: 1fr;
-        gap: $margin_2x $grid-gap;
+        gap: $margin_4x $grid-gap;
 
         @include media(">=phablet") {
             grid-template-columns: 1fr 1fr;
@@ -34,27 +34,27 @@
     //     flex-flow: row;
     // }
 
-    .lcm-post__image-link img {
+    &__image-link img {
         border-radius: $border-radius;
     }
 
-    .lcm-post__title {
-        line-height: 1;
+    &__title {
+        line-height: .85;
         margin: 0 0 $base-margin 0;
         
         a {
             @include font-sizes(20px, 22px, 22px);
             text-decoration: none;
-            color: $grey_9;
-            font-weight: 400;
+            color: $primary-color;
+            font-weight: 600;
             
             &:hover {
-                color: $primary-color;;
+                color: $grey_7;
             }
         }
     }
 
-    .lcm-post__category {
+    &__category {
         color: $grey_6;
         font-size: 12px;
         font-weight: 400;
@@ -67,20 +67,29 @@
         }
     }
 
-    .lcm-post__excerpt {
-        font-size: 17px;
+    &__content {
+        font-size: 16px;
+        margin-bottom: 10px;
     }
 
-	.lcm-post__read-more-link {
+	&__read-more-link {
 		text-decoration: none;
-		font-size: 60%;
+		font-size: 80%;
+        font-weight: 600;
+        letter-spacing: .4px;
 		text-transform: uppercase;
 
 		&::after {
-			content: "\2192";
+			content: "\279f";
 			display: inline-block;
-			margin-left: 4px;
+            font-size: 18px;
+            transform: translateX(4px) translateY(2px);
+            @include transition();
 		}
+
+        &:hover::after {
+            transform: translateX(10px) translateY(2px);
+        }
 	}
 }
 

@@ -1670,12 +1670,16 @@ hr::before {
   .first-block-align-full .site-header:not(.shrink) .menu > .menu-item:not(.highlight) > a span::after {
     background-color: #ffffff;
   }
+  .first-block-align-full .site-header:not(.shrink) .menu > .menu-item:not(.highlight) .submenu-expand svg {
+    stroke: #642581;
+    transition: all 0.2s ease-in-out;
+  }
   .first-block-align-full .site-header:not(.shrink) .menu > .menu-item:not(.highlight):hover > a, .first-block-align-full .site-header:not(.shrink) .menu > .menu-item:not(.highlight):hover svg {
     color: #ffffff;
     stroke: #ffffff;
     transition: all 0.2s ease-in-out;
   }
-  .first-block-align-full .site-header:not(.shrink) .menu > .menu-item:not(.highlight) .submenu-expand svg {
+  .first-block-align-full .site-header:not(.shrink) .menu > .menu-item:hover .sub-menu svg {
     stroke: #642581;
   }
   .first-block-align-full .site-header:not(.shrink) .menu .search-toggle svg {

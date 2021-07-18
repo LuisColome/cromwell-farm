@@ -124,10 +124,6 @@
 		top: 50%;
 		transform: translateY(-40%);
 		right: 9px;
-
-		// svg {
-		// 	fill: $base-color; // to fill the icon
-		// }
 	}
 
 	.nav-secondary {
@@ -190,7 +186,6 @@
 			&:hover {
 
 				& > .sub-menu {
-					// left: auto;
                     visibility: visible;
 					opacity: 1;
                     transform: translateY(8px);
@@ -243,7 +238,6 @@
         top: 0;
         right: -100%;
         background: $white;
-        // border-top: 1px solid $border-color;
         transition: all .3s ease-in-out;
         padding: $header-height $grid-gap 0;
         overflow: auto;
@@ -268,10 +262,6 @@
 			svg {
 				@include icon-position( 18px );
 			}
-
-			// &:not(.expanded) {
-			// 	transform: rotate(180deg);
-			// }
 
 			&.expanded {
 				transform: rotate(180deg);
@@ -306,12 +296,22 @@
     
             @include media('>=mobile_menu') {
                 & > .menu-item:not(.highlight) {
-            
+                    
+                    // Menu-itemin primery color on transparent header
                     & > a {
                         color: $primary-color;
 
                         span::after {
                             background-color: $white;
+                        }
+                    }
+
+                    .submenu-expand {
+
+                        // Give the chevron-icon the primery color as the rest of the menu on transpatent header
+                        svg {
+                            stroke: $primary-color; // color hover effect on the icon
+                            @include transition;
                         }
                     }
     
@@ -321,12 +321,20 @@
                         stroke: $white;
                         @include transition;
                     }
+                }
+            
+                // Keep chevron-down icon on submenu on primery color
+                & > .menu-item {
 
-                    .submenu-expand {
-        
-                        svg {
-                            stroke: $primary-color; // to fill the icon
+                    &:hover {
+
+                        .sub-menu {
+
+                            svg {
+                                stroke: $primary-color; // color hover effect on the icon
+                            }
                         }
+
                     }
                 }
                 

@@ -1641,8 +1641,8 @@ hr::before {
     height: 44px;
   }
   .nav-menu .submenu-expand svg {
-    width: 14px;
-    height: 14px;
+    width: 18px;
+    height: 18px;
   }
   .nav-menu .submenu-expand.expanded {
     transform: rotate(180deg);

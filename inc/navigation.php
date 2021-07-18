@@ -48,7 +48,7 @@ function lcm_footer_menu() {
 	echo '</nav>';
 
 }
-// add_action( 'genesis_footer', 'lcm_footer_menu', 12 );
+add_action( 'genesis_footer', 'lcm_footer_menu', 12 );
 
 
 

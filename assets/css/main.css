@@ -1331,7 +1331,7 @@ hr::before {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 75px;
+  height: 125px;
   background-color: #ffffff;
   padding: 0 1.375rem;
   transition: all 0.2s ease-in-out;
@@ -1340,7 +1340,7 @@ hr::before {
   content: none;
 }
 .site-header.shrink {
-  height: 50px;
+  height: 55px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 .site-header.shrink .site-title a {
@@ -1368,7 +1368,6 @@ hr::before {
 }
 .home .site-header:not(.shrink) .site-title a,
 .first-block-align-full .site-header:not(.shrink) .site-title a {
-  background-image: url(/wp-content/themes/mamiexperimentos/assets/images/logo-small.png) !important;
   background-size: cover;
 }
 
@@ -1393,27 +1392,24 @@ hr::before {
   position: relative;
   z-index: 9;
   padding: 0;
-  max-width: 300px;
+  max-width: 155px;
   transition: all 0.2s ease-in-out;
-}
-.wp-custom-logo .shrink .title-area {
-  max-width: calc(300px/1.5);
+  overflow: hidden;
 }
 
 .site-title {
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 1;
   margin: 0;
 }
-.wp-custom-logo .site-title {
-  text-indent: -9999;
+.site-title a {
+  display: block;
+  text-indent: -9999px;
+  width: 155px;
+  height: 95px;
 }
-.site-title a,
-.site-title a:focus,
-.site-title a:hover {
-  color: #616161;
-  text-decoration: none;
+.shrink .site-title a {
+  width: 128px;
+  height: 22px;
+  background-position: 50% 65%;
 }
 
 .site-description,
@@ -1437,6 +1433,7 @@ hr::before {
   line-height: 1;
   margin: 0;
   width: 100%;
+  padding-left: 0;
 }
 .nav-menu .menu-item {
   list-style: none;
@@ -1459,7 +1456,7 @@ hr::before {
   margin-right: 0;
 }
 .nav-menu .menu-item:hover > a, .nav-menu .menu-item:hover .submenu-expand svg {
-  fill: #642581;
+  stroke: #642581;
   color: #642581;
 }
 .nav-menu .menu-item.current-menu-item > a, .nav-menu .menu-item.current-menu-ancestor > a {
@@ -1611,7 +1608,7 @@ hr::before {
     transform: translateY(-50%) rotate(-90deg);
   }
   .nav-menu .sub-menu .sub-menu {
-    margin: -48px 0 0 215px;
+    margin: -48px 0 0 223px;
   }
 }
 @media (max-width: 768px) {
@@ -1624,7 +1621,7 @@ hr::before {
     right: -100%;
     background: #ffffff;
     transition: all 0.3s ease-in-out;
-    padding: 75px 32px 0;
+    padding: 125px 32px 0;
     overflow: auto;
     z-index: 997;
   }
@@ -1675,16 +1672,15 @@ hr::before {
   }
   .first-block-align-full .site-header:not(.shrink) .menu > .menu-item:not(.highlight):hover > a, .first-block-align-full .site-header:not(.shrink) .menu > .menu-item:not(.highlight):hover svg {
     color: #ffffff;
-    fill: #ffffff;
+    stroke: #ffffff;
     transition: all 0.2s ease-in-out;
   }
-  .first-block-align-full .site-header:not(.shrink) .menu .submenu-expand svg,
-.first-block-align-full .site-header:not(.shrink) .menu .search-toggle svg {
-    fill: #642581;
+  .first-block-align-full .site-header:not(.shrink) .menu > .menu-item:not(.highlight) .submenu-expand svg {
+    stroke: #642581;
   }
-}
-.first-block-align-full .site-header:not(.shrink) .menu-toggle .toggl__bar {
-  background-color: #ffffff;
+  .first-block-align-full .site-header:not(.shrink) .menu .search-toggle svg {
+    stroke: #642581;
+  }
 }
 
 /* Nav Header with Site logo
@@ -1813,7 +1809,7 @@ hr::before {
   position: absolute;
   height: 3px;
   width: 100%;
-  background: #383838;
+  background: #642581;
   border-radius: 4px;
   opacity: 1;
   right: 0;

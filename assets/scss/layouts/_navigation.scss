@@ -15,6 +15,7 @@
 		line-height: 1;
 		margin: 0;
 		width: 100%;
+        padding-left: 0; // avoid default padding for lists
 	}
 
 	.menu-item {
@@ -41,7 +42,7 @@
 
 		&:hover > a,
         &:hover .submenu-expand svg {
-            fill: $primary-color;
+            stroke: $primary-color;
 			color: $primary-color;
 		}
 
@@ -229,7 +230,7 @@
 			}
 
 			.sub-menu {
-				margin: -48px 0 0 215px;
+				margin: -48px 0 0 223px;
 			}
 		}
 	}
@@ -244,7 +245,7 @@
         background: $white;
         // border-top: 1px solid $border-color;
         transition: all .3s ease-in-out;
-        padding: 75px $grid-gap 0;
+        padding: $header-height $grid-gap 0;
         overflow: auto;
         z-index: 997;
 
@@ -317,25 +318,24 @@
                     &:hover > a,
                     &:hover svg {
                         color: $white;
-                        fill: $white;
+                        stroke: $white;
                         @include transition;
+                    }
+
+                    .submenu-expand {
+        
+                        svg {
+                            stroke: $primary-color; // to fill the icon
+                        }
                     }
                 }
                 
-                .submenu-expand,
                 .search-toggle {
     
                     svg {
-                        fill: $primary-color; // to fill the icon
+                        stroke: $primary-color; // to fill the icon
                     }
                 }
-            }
-        }
-    
-        .menu-toggle {
-    
-            .toggl__bar {
-                background-color: $white;
             }
         }
     }
@@ -513,7 +513,7 @@
 		position: absolute;
 		height: 3px;
 		width: 100%;
-		background: $base-color;
+		background: $primary-color;
 		border-radius: 4px;
 		opacity: 1;
 		right: 0;

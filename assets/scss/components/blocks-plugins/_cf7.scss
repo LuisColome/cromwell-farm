@@ -67,6 +67,7 @@
             textarea {
                 margin: .2em 0;
                 background-color: $grey_1;
+                border-radius: $border-radius;
 
                 &:focus{
                     border-color: $primary-color;
@@ -98,9 +99,5 @@
         &:hover {
             background-color: $highlight;
         }
-    }
-
-    input {
-        border-radius: $border-radius;
     }
 }

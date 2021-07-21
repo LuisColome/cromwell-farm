@@ -7,15 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### [Unreleased]
 - ~~Support for Kadence Blocks~~.
 
+### [0.9.5](https://github.com/LuisColome/cromwell-farm/releases/tag/v0.9.5) - 2021-21-07
+#### Added
+- Added support to Kadence carousel accordin to design.
+
 ### [0.9.4](https://github.com/LuisColome/cromwell-farm/releases/tag/v0.9.4) - 2021-21-07
 #### Added
-Added table styles based on theme design.
-Added support to Kadence base button style.
-Added a no-margin-botton class to better layout content.
+- Added table styles based on theme design.
+- Added support to Kadence base button style.
+- Added a no-margin-botton class to better layout content.
 #### Fixed
 - Footer widgets
 #### Changed
-Changed from classic footer widgets to block based widgets.
+- Changed from classic footer widgets to block based widgets.
 
 ### [0.9.3](https://github.com/LuisColome/cromwell-farm/releases/tag/v0.9.3) - 2021-18-07
 #### Fixed

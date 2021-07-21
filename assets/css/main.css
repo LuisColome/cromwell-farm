@@ -1018,6 +1018,7 @@ hr::before {
 .lcm-cf7-form label .wpcf7-form-control-wrap textarea {
   margin: 0.2em 0;
   background-color: #fafafa;
+  border-radius: 19px;
 }
 .lcm-cf7-form label .wpcf7-form-control-wrap input:focus,
 .lcm-cf7-form label .wpcf7-form-control-wrap textarea:focus {
@@ -1044,9 +1045,6 @@ hr::before {
 }
 .lcm-cf7-form .lcm-cf7-form__input input:hover {
   background-color: #8330a9;
-}
-.lcm-cf7-form input {
-  border-radius: 19px;
 }
 
 /* Kadence Blocks

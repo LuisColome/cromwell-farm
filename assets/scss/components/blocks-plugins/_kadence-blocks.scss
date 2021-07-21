@@ -42,4 +42,34 @@
     & .kt-btn-wrap .kt-button:not(.kb-btn-global-inherit) {
         padding: .6em 1.8em;
     }
+
+    .kt-blocks-carousel {
+
+        // .slick-prev, 
+        // .slick-next {
+        //     opacity: .4;
+        // }
+
+        .slick-prev {
+            left:-15px
+        }
+
+        .slick-next {
+            right: -15px;
+        }
+
+        .kt-carousel-arrowstyle-outlineblack .slick-prev, 
+        .kt-carousel-arrowstyle-outlineblack .slick-next {
+            border: none;
+            color: $base-color;
+        }
+
+        .slick-prev::before,
+        .slick-next::before {
+            height: 26px;
+            width: 26px;
+        }
+    }
+
+    
 }

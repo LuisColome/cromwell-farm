@@ -1072,6 +1072,22 @@ hr::before {
 .entry-content > * .kt-btn-wrap .kt-button:not(.kb-btn-global-inherit) {
   padding: 0.6em 1.8em;
 }
+.entry-content > * .kt-blocks-carousel .slick-prev {
+  left: -15px;
+}
+.entry-content > * .kt-blocks-carousel .slick-next {
+  right: -15px;
+}
+.entry-content > * .kt-blocks-carousel .kt-carousel-arrowstyle-outlineblack .slick-prev,
+.entry-content > * .kt-blocks-carousel .kt-carousel-arrowstyle-outlineblack .slick-next {
+  border: none;
+  color: #383838;
+}
+.entry-content > * .kt-blocks-carousel .slick-prev::before,
+.entry-content > * .kt-blocks-carousel .slick-next::before {
+  height: 26px;
+  width: 26px;
+}
 
 /* Structure and Layout
 ----------------------------------------------------------------------------- */

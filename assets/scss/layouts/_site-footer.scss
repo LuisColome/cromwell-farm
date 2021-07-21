@@ -8,17 +8,28 @@
 
 .footer-widgets {
 	// background: brand-color( 'blue' );
-  	background: $grey_8;
+  	background: $grey_9;
 	padding: 40px $wrap_edge 10px;
 	position: relative;
 	color: $white;
 
     .wrap {
+        display: grid;
+        gap: $grid-gap;
+        grid-template-columns: 1fr;
 
         &::before,
         &::after {
             content: none;
         }
+    }
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $white;
     }
 
 	ul {
@@ -37,12 +48,13 @@
 		text-transform: uppercase;
 	}
 
-	a {
+	a:not(.wp-block-social-link-anchor) {
 		color: $white;
-		text-decoration: none;
+		text-decoration: underline;
 
 		&:hover {
-			text-decoration: underline;
+            color:  $primary-color;
+			text-decoration: none;
 		}
 
 		svg {
@@ -52,38 +64,11 @@
 		}
 	}
 
-	@include media("<tablet") {
-
-		.social-links li {
-            display: inline-block;
-            margin: 0;
-		}
-
-		.social-links .label {
-			display: none;
-		}
-
-		.footer-widgets-1 {
-			float: left;
-			width: calc( 50% - 8px );
-		}
-
-		.footer-widgets-2 {
-			float: right;
-			width: calc( 50% - 8px );
-		}
-
-		.footer-widgets-3 {
-			overflow: hidden;
-			width: 100%;
-		}
-	}
-
 	@include media(">=tablet") {
 		.wrap {
+            grid-template-columns: 80% 1fr;
             max-width: $grid-width;
             margin: 0 auto;
-			@include columns( 3, 'div' );
 		}
 	}
 }
@@ -92,10 +77,10 @@
 ---------------------------------------------------------------------------------------------------- */
 
 .site-footer {
-    background: $grey_10;
+    background: $grey_9;
 	color: $grey_2;
 	font-size: 14px;
-	padding: $grid-gap $block-margin;
+	padding: $margin_4x $block-margin $grid-gap;
 	text-align: center;
 
 	.wrap {

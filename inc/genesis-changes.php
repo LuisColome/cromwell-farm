@@ -13,7 +13,7 @@ add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list'
 add_theme_support( 'genesis-responsive-viewport' );
 add_theme_support( 'genesis-after-entry-widget-area' );
 add_theme_support( 'genesis-structural-wraps', array( 'header', 'menu-secondary', 'site-inner', 'footer-widgets', 'footer' ) );
-add_theme_support( 'genesis-footer-widgets', 3 );
+add_theme_support( 'genesis-footer-widgets', 2 );
 add_theme_support( 'genesis-menus', array( 'primary' => 'Header Menu', 'secondary' => 'Footer Menu' ) );
 
 // Adds support for accessibility.
@@ -59,6 +59,9 @@ remove_action( 'wp_head', 'genesis_load_favicon' );
 
 // Remove Header Description
 remove_action( 'genesis_site_description', 'genesis_seo_site_description' );
+
+// Enable the block-based widget editor
+add_filter( 'use_widgets_block_editor', '__return_true' );
 
 // Remove unused sidebars
 unregister_sidebar( 'header-right' );

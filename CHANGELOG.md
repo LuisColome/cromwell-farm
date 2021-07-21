@@ -5,7 +5,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html) (or at least I'll try to).
 
 ### [Unreleased]
-- Support for Kadence Blocks.
+- ~~Support for Kadence Blocks~~.
+
+### [0.9.4](https://github.com/LuisColome/cromwell-farm/releases/tag/v0.9.4) - 2021-21-07
+#### Added
+Added table styles based on theme design.
+Added support to Kadence base button style.
+Added a no-margin-botton class to better layout content.
+#### Fixed
+- Footer widgets
+#### Changed
+Changed from classic footer widgets to block based widgets.
 
 ### [0.9.3](https://github.com/LuisColome/cromwell-farm/releases/tag/v0.9.3) - 2021-18-07
 #### Fixed

@@ -904,6 +904,9 @@ img {
   height: auto;
   border-radius: 19px;
 }
+.alignfull img {
+  border-radius: 0;
+}
 img.alignleft {
   float: left;
   margin: 0 20px 20px 0;
@@ -1576,12 +1579,6 @@ hr::before {
   border-radius: 200px;
   color: #ffffff;
 }
-@media (max-width: 768px) {
-  .nav-menu .menu-item.highlight a {
-    text-align: center;
-    margin-top: 1em;
-  }
-}
 .nav-menu .menu-item.highlight a:hover, .nav-menu .menu-item.highlight a:focus {
   background-color: #8330a9;
 }
@@ -1590,6 +1587,13 @@ hr::before {
 }
 .nav-menu .menu-item.highlight a span::after {
   content: none;
+}
+@media (max-width: 768px) {
+  .nav-menu .menu-item.highlight a {
+    text-align: center;
+    padding: 0.75em 1.55em;
+    margin: 2em 0;
+  }
 }
 .nav-menu .submenu-expand {
   background: transparent;
@@ -1710,8 +1714,11 @@ hr::before {
     right: 0;
     overflow: auto;
   }
-  .nav-menu:not(.footer) .menu > .menu-item > a {
-    padding: 11px 18px;
+  .nav-menu:not(.footer) .menu > .menu-item:not(.highlight) {
+    border-bottom: 1px solid #e0e0e0;
+  }
+  .nav-menu:not(.footer) .menu > .menu-item:not(.highlight) > a {
+    padding: 1em 0 1.2em;
     font-size: 16px;
   }
   .nav-menu:not(.footer) .submenu-expand {

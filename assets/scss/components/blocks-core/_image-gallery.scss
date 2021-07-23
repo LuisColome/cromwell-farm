@@ -9,6 +9,10 @@ img {
 	height: auto;
 	border-radius: $border-radius;
 
+    .alignfull & {
+        border-radius: 0;
+    }
+
 	&.alignleft {
 		float: left;
 		margin: 0 $block-margin $block-margin 0;

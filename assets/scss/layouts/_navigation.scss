@@ -88,18 +88,14 @@
         }
 
         &.highlight {
-                
+            
+            // Desktop menu
             a {
                 margin: 3px 0 0 1em;
                 padding: .55em 1.45em;
                 background-color: $primary-color;
                 border-radius: 200px;
                 color: $white;
-
-                @include media('<=mobile_menu') {
-                    text-align: center;
-                    margin-top: 1em;
-                }
                 
                 &:hover,
                 &:focus {
@@ -112,6 +108,16 @@
                     &::after {
                         content: none;
                     }
+                }
+            }
+
+            // Highlight styles for mobile_menu
+            @include media('<=mobile_menu') {
+                
+                a {
+                    text-align: center;
+                    padding: .75em 1.55em;
+                    margin: 2em 0;
                 }
             }
         }
@@ -261,9 +267,13 @@
                 overflow: auto;
             }
 
-            .menu > .menu-item > a {
-                padding: 11px 18px;
-                font-size: 16px;
+            .menu > .menu-item:not(.highlight)  {
+                border-bottom: 1px solid $grey_4;
+        
+                > a {
+                    padding: 1em 0 1.2em;
+                    font-size: 16px;
+                }
             }
 
             .submenu-expand {

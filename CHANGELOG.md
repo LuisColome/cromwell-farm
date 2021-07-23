@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### [Unreleased]
 - ~~Support for Kadence Blocks~~.
 
+### [0.9.7](https://github.com/LuisColome/cromwell-farm/releases/tag/v0.9.7) - 2021-23-07
+#### Updated
+- Fix margin for kadence carousel arrows.
+
 ### [0.9.6](https://github.com/LuisColome/cromwell-farm/releases/tag/v0.9.6) - 2021-21-07
 #### Updated
 - Support for Contact Form 7 plugin.

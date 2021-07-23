@@ -7,8 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### [Unreleased]
 - ~~Support for Kadence Blocks~~.
 
+### [0.9.8](https://github.com/LuisColome/cromwell-farm/releases/tag/v0.9.8) - 2021-23-07
+#### Added
+- Better spacing and margins on mobile menu links. 
+- Border botton for a better readability on mobile menu.
+#### Fixed
+- Border radius on images under alignfull blocks
+- Margins for highlighted links on respondive menu
+
 ### [0.9.7](https://github.com/LuisColome/cromwell-farm/releases/tag/v0.9.7) - 2021-23-07
-#### Fix
+#### Fixed
 - Margin for kadence carousel arrows.
 
 ### [0.9.6](https://github.com/LuisColome/cromwell-farm/releases/tag/v0.9.6) - 2021-21-07

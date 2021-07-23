@@ -13,7 +13,7 @@
  */
 function lcm_site_footer() {
 	echo '<div class="footer-left">';
-		echo '<p class="copyright">Copyright &copy; ' . date( 'Y' ) . ' ' . get_bloginfo( 'name' ) . ' ®. All Rights Reserved.</p>';
+		echo '<p class="copyright">Copyright &copy; ' . date( 'Y' ) . ' <a href="' . home_url() . '">' . get_bloginfo( 'name' ) . '</a> ®. All Rights Reserved.</p>';
 		// echo '<p class="footer-links"><a href="' . home_url( 'privacy-policy' ) . '">Privacy Policy</a> <a href="' . home_url( 'terms' ) . '">Terms</a></p>';
 	echo '</div>';
 	// echo '<a class="backtotop" href="#">Back to top' . ea_icon( array( 'icon' => 'arrow-up' ) ) . '</a>';

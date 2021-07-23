@@ -2613,10 +2613,6 @@ textarea:focus:-ms-input-placeholder {
 ---------------------------------------------------------------------------------------------------- */
 .site-footer {
   background: #454545;
-  color: #f7f7f7;
-  font-size: 14px;
-  padding: 4.4rem 20px 32px;
-  text-align: center;
 }
 .site-footer .wrap {
   max-width: 1200px;
@@ -2631,10 +2627,18 @@ textarea:focus:-ms-input-placeholder {
 .site-footer .wrap > *:last-child {
   margin-bottom: 0;
 }
-.site-footer a {
+.site-footer .wrap .footer-left .copyright {
+  color: #f7f7f7;
+  font-size: 14px;
+  padding: 4.4rem 20px 32px;
+  text-align: center;
+}
+.site-footer .wrap .footer-left .copyright a {
+  color: #ffffff;
   text-decoration: underline;
 }
-.site-footer a:hover {
+.site-footer .wrap .footer-left .copyright a:hover, .site-footer .wrap .footer-left .copyright a:focus {
+  color: #642581;
   text-decoration: none;
 }
 @media (min-width: 768px) {

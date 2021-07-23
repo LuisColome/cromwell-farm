@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### [Unreleased]
 - ~~Support for Kadence Blocks~~.
 
+### [0.9.9](https://github.com/LuisColome/cromwell-farm/releases/tag/v0.9.9) - 2021-23-07
+#### Fixed
+- Footer creds links style.
+
 ### [0.9.8](https://github.com/LuisColome/cromwell-farm/releases/tag/v0.9.8) - 2021-23-07
 #### Added
 - Better spacing and margins on mobile menu links. 

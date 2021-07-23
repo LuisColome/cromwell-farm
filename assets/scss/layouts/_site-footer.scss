@@ -78,10 +78,6 @@
 
 .site-footer {
     background: $grey_9;
-	color: $grey_2;
-	font-size: 14px;
-	padding: $margin_4x $block-margin $grid-gap;
-	text-align: center;
 
 	.wrap {
         max-width: $grid-width;
@@ -98,15 +94,28 @@
         & > *:last-child {
             margin-bottom: 0;
         }
+
+        .footer-left {
+
+            .copyright {
+                color: $grey_2;
+                font-size: 14px;
+                padding: $margin_4x $block-margin $grid-gap;
+                text-align: center;
+
+                a {
+                    color: $white;
+                    text-decoration: underline;
+            
+                    &:hover,
+                    &:focus {
+                        color: $primary-color;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
     }
-
-	a {
-		text-decoration: underline;
-
-		&:hover {
-			text-decoration: none;
-		}
-	}
 	
 	@include media(">=tablet") {
 		text-align: center;

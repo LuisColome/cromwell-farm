@@ -1,6 +1,6 @@
 # Cromwell Farm - Genesis Child Theme 
 
-[![Cromwell Farm Genesis Child Theme v0.9.8 badge][changelog-badge]][changelog]  [![Version 0.9.8 Badge][version-badge]][changelog]  [![Last commit badge][last-commit]][last-commit-link]
+[![Cromwell Farm Genesis Child Theme v0.9.9 badge][changelog-badge]][changelog]  [![Version 0.9.9 Badge][version-badge]][changelog]  [![Last commit badge][last-commit]][last-commit-link]
 
 ![Cromwell Farm Screenshot](screenshot.png)
 
@@ -10,7 +10,7 @@ Luis Colomé ( [@luiscolome](https://twitter.com/luiscolome) / [luiscolome.com](
 
 ## Summary
 
-WordPress Theme to use as Genesis Child Theme for the Cromwell Farm site. Uses SCSS and PrePros to compile it. Tested up to WordPress 5.7.2 and Genesis 3.3.4.
+WordPress Theme to use as Genesis Child Theme for the Cromwell Farm site. Uses SCSS and PrePros to compile it. Tested up to WordPress 5.8 and Genesis 3.3.4.
 
 ## Usage
 
@@ -42,6 +42,6 @@ Without these projects, this WordPress Genesis Starter Child Theme wouldn't be w
 
 [changelog]: ./CHANGELOG.md
 [changelog-badge]: https://img.shields.io/badge/Changelog-Cromwell%20Farm%20Genesis%20Child%20%20Theme-orange
-[version-badge]: https://img.shields.io/badge/version-0.9.8-informational.svg
+[version-badge]: https://img.shields.io/badge/version-0.9.9-informational.svg
 [last-commit]: https://img.shields.io/github/last-commit/luiscolome/cromwell-farm/main?color=yellow&logoColor=red
 [last-commit-link]: https://github.com/LuisColome/cromwell-farm/commit/main

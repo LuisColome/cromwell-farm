@@ -904,7 +904,7 @@ img {
   height: auto;
   border-radius: 19px;
 }
-.alignfull img {
+img.wp-block-cover__image-background {
   border-radius: 0;
 }
 img.alignleft {
@@ -1052,6 +1052,9 @@ hr::before {
 
 /* Kadence Blocks
 ---------------------------------------------------------------------------- */
+.full-width-content .entry-content > *[class^=wp-block-kadence-].alignfull, .content-width .entry-content > *[class^=wp-block-kadence-].alignfull {
+  padding: 0;
+}
 .full-width-content .entry-content > *.wp-block-kadence-rowlayout.alignfull, .content-width .entry-content > *.wp-block-kadence-rowlayout.alignfull {
   padding: 0;
 }

@@ -9,7 +9,7 @@ img {
 	height: auto;
 	border-radius: $border-radius;
 
-    .alignfull & {
+    &.wp-block-cover__image-background {
         border-radius: 0;
     }
 

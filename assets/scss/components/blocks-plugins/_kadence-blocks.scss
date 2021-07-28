@@ -10,6 +10,11 @@
 	.full-width-content &,
 	.content-width & {
 
+        &[class^="wp-block-kadence-"].alignfull {
+            padding: 0;
+
+        }
+
         &.wp-block-kadence-rowlayout.alignfull {
             padding: 0;
         }

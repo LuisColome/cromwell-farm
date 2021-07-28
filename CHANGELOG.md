@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### [Unreleased]
 - ~~Support for Kadence Blocks~~.
 
+### [1.0.1](https://github.com/LuisColome/cromwell-farm/releases/tag/v1.0.1) - 2021-28-07
+#### Fixed
+- Border radius on cover block background image
+
 ### [1.0.0](https://github.com/LuisColome/cromwell-farm/releases/tag/v1.0.0) - 2021-23-07
 #### Added
 - Main logo to the mobile navigation header liked to home page.

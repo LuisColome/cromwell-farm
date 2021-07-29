@@ -22,11 +22,11 @@ Please, keep in mind it is a working in progress project. Thank you :octocat:
 
 ### Features
 
-1. SCSS with Prepros to compile it.
+1. SCSS with Prepros to compile it
 2. Easy to customize
 4. Child theme tweaks
 5. WordPress cleanup functions
-6. ACF support
+6. ACF support.
 
 ### Credits
 

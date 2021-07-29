@@ -1665,7 +1665,7 @@ hr::before {
   }
   .nav-menu .menu-item:hover > .sub-menu {
     visibility: visible;
-    opacity: 1;
+    opacity: 0.9;
     transform: translateY(8px);
     transition: all 0.25s ease-in-out;
   }
@@ -1756,22 +1756,23 @@ hr::before {
 -------------------------------------------------------------------- */
 @media (min-width: 768px) {
   .first-block-align-full .site-header:not(.shrink) .menu > .menu-item:not(.highlight) > a {
-    color: #642581;
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(100, 37, 129, 0.3);
   }
   .first-block-align-full .site-header:not(.shrink) .menu > .menu-item:not(.highlight) > a span::after {
-    background-color: #ffffff;
+    background-color: #642581;
   }
   .first-block-align-full .site-header:not(.shrink) .menu > .menu-item:not(.highlight) .submenu-expand svg {
-    stroke: #642581;
-    transition: all 0.2s ease-in-out;
-  }
-  .first-block-align-full .site-header:not(.shrink) .menu > .menu-item:not(.highlight):hover > a, .first-block-align-full .site-header:not(.shrink) .menu > .menu-item:not(.highlight):hover svg {
-    color: #ffffff;
     stroke: #ffffff;
     transition: all 0.2s ease-in-out;
   }
-  .first-block-align-full .site-header:not(.shrink) .menu > .menu-item:hover .sub-menu svg {
+  .first-block-align-full .site-header:not(.shrink) .menu > .menu-item:not(.highlight):hover > a, .first-block-align-full .site-header:not(.shrink) .menu > .menu-item:not(.highlight):hover svg {
+    color: #642581;
     stroke: #642581;
+    transition: all 0.2s ease-in-out;
+  }
+  .first-block-align-full .site-header:not(.shrink) .menu > .menu-item:hover .sub-menu svg {
+    stroke: #ffffff;
   }
   .first-block-align-full .site-header:not(.shrink) .menu .search-toggle svg {
     stroke: #642581;
@@ -1937,7 +1938,7 @@ hr::before {
   position: absolute;
   height: 3px;
   width: 100%;
-  background: #642581;
+  background: #ffffff;
   border-radius: 4px;
   opacity: 1;
   right: 0;

@@ -30,7 +30,7 @@
 			font-weight: 600;
 			line-height: 1.2;
 			padding: .5em 1em;
-            margin-right: .7em;
+            margin: 0 .1em 0;
 			position: relative;
 			text-decoration: none;
             text-transform: uppercase;
@@ -55,7 +55,7 @@
             display: inline-block;
             position: relative;
             text-decoration: none;
-            padding-top: 5px;
+            // padding-top: 5px;
 
             &::after {
                 content: '';
@@ -91,7 +91,7 @@
             
             // Desktop menu
             a {
-                margin: 3px 0 0 1em;
+                margin: 0 0 0 1em;
                 padding: .55em 1.45em;
                 background-color: $primary-color;
                 border-radius: 200px;
@@ -128,7 +128,7 @@
 		position: absolute;
 		line-height: 0;
 		top: 50%;
-		transform: translateY(-40%);
+		transform: translateY(-50%);
 		right: 9px;
 	}
 
@@ -210,6 +210,10 @@
                     transition: all 0.25s ease-in-out;
 				}
 			}
+
+            &.menu-item-has-children a {
+                margin-right: 12px;
+            }
 		}
 
 		.sub-menu {

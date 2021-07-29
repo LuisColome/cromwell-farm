@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### [Unreleased]
 - ~~Support for Kadence Blocks~~.
 
+### [1.0.3](https://github.com/LuisColome/cromwell-farm/releases/tag/v1.0.3) - 2021-29-07
+#### Fixed
+- Spacing and font size on main menu items. 
+
 ### [1.0.2](https://github.com/LuisColome/cromwell-farm/releases/tag/v1.0.2) - 2021-29-07
 #### Fixed
 - Better readability for main menu items.

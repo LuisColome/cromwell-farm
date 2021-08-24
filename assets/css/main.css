@@ -919,7 +919,7 @@ img.aligncenter {
   margin-left: auto;
   margin-right: auto;
 }
-.wp-block-image:not(.is-style-rounded) img {
+.wp-block-image:not(.is-style-rounded):not(.alignfull) img {
   border-radius: 19px;
 }
 
@@ -2047,6 +2047,13 @@ hr::before {
   max-width: 100vw;
   width: 100vw;
   padding: 0 1.375rem;
+}
+.full-width-content .entry-content > *.alignfull.wp-block-image, .full-width-content .entry-content > *.alignfull.wp-block-embed, .content-width .entry-content > *.alignfull.wp-block-image, .content-width .entry-content > *.alignfull.wp-block-embed,
+.full-width-content .editor-styles-wrapper > *.alignfull.wp-block-image,
+.full-width-content .editor-styles-wrapper > *.alignfull.wp-block-embed,
+.content-width .editor-styles-wrapper > *.alignfull.wp-block-image,
+.content-width .editor-styles-wrapper > *.alignfull.wp-block-embed {
+  padding: 0;
 }
 .full-width-content .entry-content > *.aligncontent, .content-width .entry-content > *.aligncontent,
 .full-width-content .editor-styles-wrapper > *.aligncontent,

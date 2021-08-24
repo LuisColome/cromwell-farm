@@ -28,8 +28,8 @@ img {
 		margin-right: auto;
 	}
 
-    // overwrite the default Gutenberg style
-    .wp-block-image:not(.is-style-rounded) & {
+    // overwrite the default Gutenberg style and remove border radius on alignfull images.
+    .wp-block-image:not(.is-style-rounded):not(.alignfull) & {
         border-radius: $border-radius;
     }
 

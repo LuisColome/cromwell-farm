@@ -1957,6 +1957,9 @@ hr::before {
 .menu-toggle .toggl__bar.third {
   top: 12px;
 }
+.shrink .menu-toggle .toggl__bar {
+  background-color: #642581;
+}
 .menu-toggle:hover, .menu-toggle:focus, .menu-toggle.active {
   background-color: transparent;
 }

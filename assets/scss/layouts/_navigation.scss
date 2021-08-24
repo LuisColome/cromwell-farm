@@ -565,17 +565,24 @@
 		transition: all .35s ease-in-out;
 
 		&.first {
-		top: 0px;
+		    top: 0px;
 		}
 
 		&.second {
-		top: 6px;
+		    top: 6px;
 		}
 
 		&.third {
-		top: 12px;
+		    top: 12px;
 		}
 	}
+
+    .shrink & {
+
+        .toggl__bar {
+            background-color: $primary-color;
+        }
+    }
 
 	&:hover,
 	&:focus,
@@ -585,18 +592,22 @@
 
 	&.active {
 		background-color: transparent; // prevent button defaults
+
 		.toggl__bar {
 			background: $primary-color;
             height: 4px;
+
 			&.first {
 				transform: rotate(315deg);
                 top: 12px;
                 right: -1px;
 				width: 60%;
 			}
+
 			&.second {
 				transform: rotate(180deg);
 			}
+            
 			&.third {
 				transform: rotate(225deg);
 				top: 0px;

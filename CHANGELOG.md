@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### [Unreleased]
 - ~~Support for Kadence Blocks~~.
 
+### [1.0.4.1](https://github.com/LuisColome/cromwell-farm/releases/tag/v1.0.4.1) - 2021-25-09
+#### Fixed
+- Border radius on fill images from Media and Text block.
+
 ### [1.0.4](https://github.com/LuisColome/cromwell-farm/releases/tag/v1.0.4) - 2021-24-08
 #### Fixed
 - Padding and border-radius on images with alignfull alignment

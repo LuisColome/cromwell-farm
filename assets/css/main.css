@@ -883,6 +883,10 @@ blockquote.wp-block-quote p:last-of-type {
     margin-bottom: 20px;
   }
 }
+.entry-content > *.wp-block-media-text.is-image-fill .wp-block-media-text__media,
+.block-area > *.wp-block-media-text.is-image-fill .wp-block-media-text__media {
+  border-radius: 19px;
+}
 .entry-content > *.wp-block-media-text .wp-block-media-text__media,
 .block-area > *.wp-block-media-text .wp-block-media-text__media {
   border-radius: 19px;
